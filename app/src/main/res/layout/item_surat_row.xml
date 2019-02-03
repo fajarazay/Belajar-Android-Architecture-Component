@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+        <variable
+                name="itemSurat"
+                type="comfajarazay.github.suratquran.viewmodels.ItemSuratViewModel"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="8dp">
+
+        <LinearLayout android:orientation="horizontal"
+                      android:layout_margin="10dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/poster"
+                    tools:text="Title Movie"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@color/colorAccent">
+            </ImageView>
+
+                <TextView
+                        android:id="@+id/textViewNamaSuratArab"
+                        android:layout_height="75dp"
+                        android:layout_width="75dp"
+                        android:textColor="#ffff"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:text="@{itemSurat.namaSuratArab}"
+                        tools:text="YASIN"
+                />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/textViewNamaSurat"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{itemSurat.namaSurat}"
+                        tools:text="Yaa sin"/>
+
+                <TextView
+                        android:id="@+id/date"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Title Movie"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
